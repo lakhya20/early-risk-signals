@@ -1,0 +1,86 @@
+/* Chart Container - NO BACKGROUND BOXES, NO BORDERS */
+.chart-container {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(10, 20, 40, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 22px rgba(0, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: visible;
+}
+
+.chart-container:hover {
+  border-color: rgba(0, 255, 255, 0.35);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
+}
+
+.chart-title {
+  color: #aee0f3;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Inter", sans-serif;
+}
+
+.chart-icon {
+  font-size: 16px;
+  opacity: 0.8;
+  color: #00eaff;
+  text-shadow: 0 0 8px rgba(0, 234, 255, 0.4);
+}
+
+.chart-wrapper {
+  height: 280px;
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.3));
+}
+
+.chart-wrapper canvas {
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.4));
+}
+
+.chart-wrapper-small {
+  height: 280px;
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.3));
+}
+
+.chart-wrapper-small canvas {
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.4));
+}
+
+/* Chart.js Tooltip Styling */
+.chartjs-tooltip {
+  background: rgba(10, 20, 40, 0.98) !important;
+  border: 1px solid rgba(0, 255, 255, 0.4) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  color: #dfefff !important;
+  box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.3) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Grid/Axis Colors - Subtle */
+.chartjs-grid {
+  color: rgba(157, 183, 198, 0.1) !important;
+}
+
+.chartjs-tick {
+  color: #9db7c6 !important;
+  font-size: 11px !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+/* Remove chart background boxes */
+.chartjs-render-monitor {
+  background: transparent !important;
+}

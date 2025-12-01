@@ -1,0 +1,139 @@
+:root {
+  --accent: #00eaff;
+  --accent2: #a855f7;
+  --accent-high: #ff4f6b;
+  --bg-dark: #020409;
+  --bg-panel: rgba(15, 25, 46, 0.85);
+  --glow: 0px 0px 20px rgba(0, 255, 255, 0.28);
+  --radius: 14px;
+  --text-primary: #dfefff;
+  --text-secondary: #9fcbdc;
+  --text-muted: #6b7280;
+  --border-neon: rgba(0, 255, 255, 0.22);
+}
+
+/* Neon Card Base */
+.neon-card {
+  border-radius: 14px;
+  background: rgba(15, 25, 46, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.22);
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.28);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neon-card:hover {
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.glow-panel {
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.28);
+}
+
+.gradient-bg {
+  background: linear-gradient(180deg, rgba(15, 25, 46, 0.85), rgba(10, 20, 40, 0.85));
+}
+
+/* Glow Utilities */
+.glow {
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.28);
+}
+
+.glow-sm {
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
+}
+
+.glow-lg {
+  box-shadow: 0px 0px 40px rgba(0, 255, 255, 0.5);
+}
+
+/* Neon Border Animation */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.28);
+  }
+  50% {
+    box-shadow: 0px 0px 35px rgba(0, 255, 255, 0.5);
+  }
+}
+
+.neon-border {
+  border: 1px solid rgba(0, 255, 255, 0.22);
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* Button Glow Effect */
+.btn-glow {
+  background: linear-gradient(90deg, #00eaff, #a855f7);
+  border: none;
+  color: #001;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 25px rgba(0, 234, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 35px rgba(0, 234, 255, 0.6);
+}
+
+.btn-glow:active {
+  transform: translateY(0);
+}
+
+.btn-glow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Transition Utilities */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fast {
+  transition: all 0.15s ease;
+}
+
+.transition-slow {
+  transition: all 0.5s ease;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}

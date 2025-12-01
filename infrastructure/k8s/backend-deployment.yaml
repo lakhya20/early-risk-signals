@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ers-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ers-backend
+  template:
+    metadata:
+      labels:
+        app: ers-backend
+    spec:
+      containers:
+        - name: backend
+          image: ers-backend:latest
+          ports:
+            - containerPort: 8000

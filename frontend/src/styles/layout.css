@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+.app-root {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar - Fixed Left Panel */
+.neon-sidebar,
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(15, 25, 46, 0.95), rgba(2, 4, 9, 0.98));
+  padding: 28px;
+  box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.05);
+  border-right: 1px solid rgba(0, 255, 255, 0.15);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  color: #ddd;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00eaff, #004e8f);
+  color: #001;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 30px rgba(0, 234, 255, 0.2), 0 0 18px rgba(0, 234, 255, 0.25);
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 40px rgba(0, 234, 255, 0.3), 0 0 25px rgba(0, 234, 255, 0.35);
+}
+
+.brand-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #bfefff;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  color: #9fcbdc;
+  margin-top: 2px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.menu-item {
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #bfefff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: inset 0 0 24px rgba(0,0,0,0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(90deg, rgba(0, 234, 255, 0.15), transparent);
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover::before {
+  width: 100%;
+}
+
+.menu-item:hover {
+  background: rgba(0, 234, 255, 0.08);
+  color: #e8fbff;
+  transform: translateX(4px);
+}
+
+.menu-item.active {
+  background: linear-gradient(90deg, rgba(0, 234, 255, 0.15), rgba(0, 150, 200, 0.1));
+  border-left: 4px solid #00eaff;
+  box-shadow: 0 8px 30px rgba(0, 234, 255, 0.15), 0 0 28px rgba(0, 234, 255, 0.2), inset 0 0 20px rgba(0, 234, 255, 0.1);
+  color: #e8fbff;
+}
+
+.menu-item.active::before {
+  width: 100%;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #00eaff;
+  text-shadow: 0 0 8px rgba(0, 234, 255, 0.4);
+}
+
+.model-status {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(15, 25, 46, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.model-status:hover {
+  border-color: rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+}
+
+.model-title {
+  font-size: 12px;
+  color: #9fcbdc;
+}
+
+.model-version {
+  font-weight: 700;
+  color: #00eaff;
+  margin-top: 6px;
+  font-size: 13px;
+  text-shadow: 0 0 8px rgba(0, 234, 255, 0.4);
+}
+
+/* Main Content - Right Panel */
+.main-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 32px 40px;
+}
+
+.main-content > * {
+  width: 100%;
+}
+
+/* Page Transitions */
+.page {
+  animation: fadeIn 0.4s ease-in;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive - Only hide sidebar on very small screens */
+@media (max-width: 768px) {
+  .sidebar,
+  .neon-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open,
+  .neon-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

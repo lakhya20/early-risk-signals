@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+body {
+  font-family: "Poppins", "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  background: radial-gradient(circle at top, #0f1535, #020409 70%);
+  color: #dfefff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 36px 56px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #9fcbdc;
+  font-family: "Inter", sans-serif;
+}
+
+.stat-number,
+.stat-value,
+.score-value,
+.summary-value {
+  font-family: "Inter Tight", "Satoshi", "Inter", sans-serif;
+  font-weight: 700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 234, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 234, 255, 0.5);
+}
+
+/* Global Text Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Poppins", "Inter", sans-serif;
+}

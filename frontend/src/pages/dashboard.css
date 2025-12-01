@@ -1,0 +1,29 @@
+.page { padding: 36px 56px; margin-left: 260px; color:#dfefff; min-height:100vh; }
+
+.page-title { font-size:36px; text-shadow: 0 6px 30px rgba(0,220,255,0.07); color:#bfefff; margin-bottom:18px; }
+
+.stat-cards { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; margin-bottom:22px; }
+
+.stat-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:18px; border-radius:12px; box-shadow: 0 4px 40px rgba(0,200,255,0.02), 0 0 30px rgba(0,200,255,0.02) inset;
+  border:1px solid rgba(0,220,255,0.04);
+}
+
+.stat-title{ font-size:12px; color:#9fcbdc; }
+
+.stat-value{ font-size:28px; font-weight:700; color:#e8fbff; margin-top:8px }
+
+.charts-row{ display:grid; grid-template-columns: 1fr 420px; gap:18px; margin-bottom:24px; }
+
+.chart-card{ padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(2,12,18,0.7), rgba(7,12,22,0.6)); border:1px solid rgba(0,255,240,0.03) }
+
+.chart-title { color:#aee0f3; margin-bottom:8px; font-weight:600; }
+
+.active-model { display:flex; justify-content:space-between; gap:12px; padding:18px; border-radius:12px; margin-top:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01)); border:1px solid rgba(0,255,240,0.03)
+}
+
+.model-title{ font-weight:700 }
+
+.metric { color:#9fcbdc; margin-left:12px }
+

@@ -1,0 +1,31 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite
+*.db
+
+# ML artifacts
+backend/ml/models/
+*.pkl
+*.joblib
+
+# Environment
+.env
+
+# Node
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# System
+.DS_Store
+Thumbs.db
+
+# Cache
+.npm/

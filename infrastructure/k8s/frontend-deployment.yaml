@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ers-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ers-frontend
+  template:
+    metadata:
+      labels:
+        app: ers-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ers-frontend:latest
+          ports:
+            - containerPort: 5173

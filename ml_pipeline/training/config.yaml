@@ -1,0 +1,12 @@
+data:
+  file: credit_risk.csv
+  target: delinquent
+training:
+  test_size: 0.2
+  params:
+    learning_rate: 0.1
+    n_estimators: 200
+    max_depth: 4
+    subsample: 0.8
+    colsample_bytree: 0.8
+    objective: binary:logistic
